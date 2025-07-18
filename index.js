@@ -45,6 +45,11 @@ app.post('/aws-sign', (req, res) => {
   }
 });
 
+// 👉 AÑADIDO: Respuesta cuando entras desde el navegador
+app.get('/', (req, res) => {
+  res.send('Servidor de firma AWS activo');
+});
+
 app.listen(port, '0.0.0.0', () => {
   console.log(`Servidor de firma AWS corriendo en puerto ${port}`);
 });
